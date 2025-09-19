@@ -1,0 +1,8 @@
+
+body {
+  background-color: black;
+  background-image: url("./img/snow02.gif");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}

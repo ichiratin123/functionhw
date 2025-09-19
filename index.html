@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="container mx-auto py-6">
+        <div class="md:flex">
+          <!-- TAB BUTTONS -->
+          <ul
+            id="leftTabs"
+            data-tabs-toggle="#rightTabContent"
+            role="tablist"
+            class="flex flex-col space-y-4 text-sm font-medium text-gray-500 md:me-4 mb-4 md:mb-0"
+          >
+            <li>
+              <button
+                id="profile-tab"
+                type="button"
+                role="tab"
+                aria-controls="profile-panel"
+                aria-selected="true"
+                data-tabs-target="#profile-panel"
+                class="inline-block items-center px-3 py-3 w-full rounded-lg text-white bg-gray-800"
+              >
+                Bài 1
+              </button>
+            </li>
+
+            <li>
+              <button
+                id="dashboard-tab"
+                type="button"
+                role="tab"
+                aria-controls="dashboard-panel"
+                aria-selected="false"
+                data-tabs-target="#dashboard-panel"
+                class="inline-block items-center px-3 py-3 w-full rounded-lg bg-gray-800 hover:bg-gray-700 hover:text-white"
+              >
+                Bài 2
+              </button>
+            </li>
+
+            <li>
+              <button
+                id="settings-tab"
+                type="button"
+                role="tab"
+                aria-controls="settings-panel"
+                aria-selected="false"
+                data-tabs-target="#settings-panel"
+                class="inline-block items-center px-4 py-3 w-full rounded-lg bg-gray-800 hover:bg-gray-700 hover:text-white whitespace-nowrap"
+              >
+                Bài 3
+              </button>
+            </li>
+
+            <li>
+              <button
+                id="contact-tab"
+                type="button"
+                role="tab"
+                aria-controls="contact-panel"
+                aria-selected="false"
+                data-tabs-target="#contact-panel"
+                class="inline-block items-center px-4 py-3 w-full rounded-lg bg-gray-800 hover:bg-gray-700 hover:text-white whitespace-nowrap"
+              >
+                Bài 4
+              </button>
+            </li>
+          </ul>
+
+          <!-- TAB CONTENT -->
+          <div id="rightTabContent" class="w-full">
+            <!-- b1 -->
+            <div
+              id="profile-panel"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+              class="p-6 bg-gray-800 text-gray-400 rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="./img/b1.png" alt="" class="pb-5" />
+
+              <form
+                class="w-full flex flex-col gap-5 justify-center items-center"
+              >
+                <div class="flex gap-5">
+                  <input
+                    type="number"
+                    id="b1__dc"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Điểm Chuẩn"
+                    required
+                  />
+                  <select
+                    id="b1__kv"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option value="" disabled selected hidden>Khu vực</option>
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                  </select>
+                  <select
+                    id="b1__dt"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option value="" disabled selected hidden>Đối tượng</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div class="flex gap-5">
+                  <input
+                    type="number"
+                    id="b1__t"
+                    min="0"
+                    max="10"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Toán"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="b1__v"
+                    min="0"
+                    max="10"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Văn"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="b1__a"
+                    min="0"
+                    max="10"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Anh"
+                    required
+                  />
+                </div>
+                <button
+                  id="b1__btn"
+                  onclick="b1()"
+                  class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  Check
+                </button>
+              </form>
+
+              <div class="pt-10"><span id="b1__kq"></span></div>
+            </div>
+
+            <!-- b2 -->
+            <div
+              id="dashboard-panel"
+              role="tabpanel"
+              aria-labelledby="dashboard-tab"
+              class="hidden p-6 bg-gray-800 text-gray-400 rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="./img/b2.png" alt="" class="pb-5" />
+              <form
+                action=""
+                class="w-full flex flex-col gap-5 justify-center items-center"
+              >
+                <div class="flex gap-5">
+                  <input
+                    type="text"
+                    id="b2__name"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Tên"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="b2__kw"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Số Kw"
+                    required
+                  />
+                </div>
+                <div>
+                  <button
+                    id="b2__btn"
+                    onclick="b2()"
+                    class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    Check
+                  </button>
+                </div>
+              </form>
+              <div class="pt-10"><span id="b2__kq"></span></div>
+            </div>
+
+            <!-- b3 -->
+            <div
+              id="settings-panel"
+              role="tabpanel"
+              aria-labelledby="settings-tab"
+              class="hidden p-6 bg-gray-800 text-gray-400 rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="./img/b3.png" alt="" class="pb-5" />
+              <form
+                action=""
+                class="w-full flex flex-col gap-5 justify-center items-center"
+              >
+                <div class="flex gap-5">
+                  <input
+                    type="text"
+                    id="b3__name"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Tên"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="b3__salary"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Thu nhập năm"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="b3__depend"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Số người phụ thuộc"
+                    required
+                  />
+                </div>
+                <div>
+                  <button
+                    id="b3__btn"
+                    onclick="b3()"
+                    class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    Check
+                  </button>
+                </div>
+              </form>
+              <div class="pt-10"><span id="b3__kq"></span></div>
+            </div>
+
+            <!-- b4 -->
+            <div
+              id="contact-panel"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+              class="hidden p-6 bg-gray-800 text-gray-400 rounded-lg flex flex-col justify-center items-center"
+            >
+              <img src="./img/b4.png" alt="" class="pb-5" />
+              <form
+                action=""
+                class="w-full flex flex-col gap-5 justify-center items-center"
+              >
+                <div class="flex gap-5">
+                  <select
+                    id="b4__kh"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option value="" disabled selected hidden>Đối tượng</option>
+                    <option value="1">Nhà dân</option>
+                    <option value="2">Doanh nghiệp</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="b4__ma"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Mã khánh hàng"
+                    required
+                  />
+                  <input
+                    type="number"
+                    id="b4__kcc"
+                    aria-describedby="helper-text-explanation"
+                    class="bg-gray-50 p-2.5 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Số kênh cao cấp"
+                    required
+                  />
+                </div>
+                <div>
+                  <button
+                    id="b4__btn"
+                    onclick="b4()"
+                    class="bg-gray-50 px-4 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    Check
+                  </button>
+                </div>
+              </form>
+              <div class="pt-10"><span id="b4__kq"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
