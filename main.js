@@ -126,12 +126,6 @@ function b3() {
     let thuNhapChiuThue = tinhThuNhapChiuThue(tongThuNhap, soNguoiPhuThuoc);
     let thuePhaiNop = tinhThueTheoBieu(thuNhapChiuThue);
 
-    console.log("===== KẾT QUẢ =====");
-    console.log("Họ tên:", hoTen);
-    console.log("Tổng thu nhập:", tongThuNhap.toLocaleString(), "VND");
-    console.log("Thu nhập chịu thuế:", thuNhapChiuThue.toLocaleString(), "VND");
-    console.log("Thuế phải nộp:", thuePhaiNop.toLocaleString(), "VND");
-
     document.getElementById("b3__kq").innerHTML = `Tên: ${hoTen} - Tổng thu nhập: ${tongThuNhap}đ <br \> Thu nhập chịu thuế: ${thuNhapChiuThue}đ - Thuế phải nộp: ${thuePhaiNop}đ`;
 }
 
